@@ -54,7 +54,7 @@ const HomePage = () => {
       setUsername(player);
       //Error handling for form
       if (player === undefined) {
-        setError("Please enter a username to become a Quizzer");
+        setError("Please enter a username to join the quiz");
       } else if (room === undefined) {
         setError("To create a room or join a game, please set a room name");
       } else {
@@ -139,9 +139,9 @@ const HomePage = () => {
     return (
       <div id="welcome">
         <p id="leaderboardIcon" onClick={leaderBoard}>
-          LEADERBOARD 
+          SCOREBOARD 
         </p>
-        <h1>Quiz Pro Quo</h1>
+        <h1>The Mastermind Quiz</h1>
         <form role="form">
           <label htmlFor="username">Username</label>
           <input
@@ -164,7 +164,7 @@ const HomePage = () => {
             onChange={handleRoomInput}
           />
   
-          <div className="button-container" style={{display:"flex", justifyContent:"center"}}>
+          <div className="button-container">
           <button
             type="submit"
             name="newQuiz"
