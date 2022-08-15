@@ -1,9 +1,8 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import io from "socket.io-client";
 import { useDispatch } from "react-redux";
 import { setHost, setPlayer, setID } from "../../actions/userType";
-import { socket } from "../../socket/index.js";
+import { socket } from "../../Socket/index";
 
 
 const HomePage = () => {
@@ -79,7 +78,7 @@ const HomePage = () => {
       const player = usrInput;
       setUsername(player);
       if (player === undefined) {
-        setError("Don't be rude, introduce yourself!");
+        setError("Please, Enter Valid Username and Roomname.");
       } else if (room === undefined) {
         setError("You need to create room or give an existing name");
       } else {
@@ -139,9 +138,8 @@ const HomePage = () => {
   
     return (
       <div id="welcome">
-        {/* <img src={Logo} alt="Quiz Pro Quo logo" /> */}
         <p id="leaderboardIcon" onClick={leaderBoard}>
-          LEADERBOARD <FontAwesomeIcon className="iconT" icon={faTrophy} beat />
+          LEADERBOARD 
         </p>
         <h1>Quiz Pro Quo</h1>
         <form role="form">
