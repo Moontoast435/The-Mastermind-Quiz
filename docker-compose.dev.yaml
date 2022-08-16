@@ -5,7 +5,7 @@ services:
       - 3001:3001
     environment: 
       - DB_NAME=QuizDB
-      - MONGODB_URI=mongodb+srv://quizproquo:Gebru12@quizproquo.fmurj.mongodb.net/QuizDB?retryWrites=true&w=majority
+      - MONGODB_URI=mongodb+srv://Masterminds:mastermindDB@cluster0.w1gphwe.mongodb.net/?retryWrites=true&w=majority
       - NODE_ENV=development
     depends_on:
       - db
