@@ -2,8 +2,8 @@ import React, {useState,useEffect} from 'react';
 import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from 'react-router-dom';
 // import { fetchQuiz } from "../../actions";
-import { socket } from '../../socket';
-import "./style.css"
+import { socket } from '../../Socket/index';
+// import "./style.css"
 
 const LobbyStatus = ({host}) => {
     const navigate = useNavigate();
@@ -13,7 +13,7 @@ const LobbyStatus = ({host}) => {
     const [subject, setSubject] = useState("") 
     const [difficulty, setDifficulty] = useState("")
     const [numberOfQs, setNo] = useState("")
-    useSelector((state) => state.config.config.numberOfQs ) 
+    // const useSelector((state) => state.config.numberOfQs ) 
     const room = useSelector((state) => state.user.room)
 
     const usertype = host//useSelector((state) => state.user.user.type)

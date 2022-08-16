@@ -25,13 +25,13 @@ const WaitingRoom = () => {
   // Sets player array
     useEffect(() => {  
         socket.emit('game-players', room, (res) => {
-          console.log(res, room)
-            const usernames = res?.map(resp => resp.username)
+          console.log(res,'hello')
+            const usernames = res.map(resp => resp.username)
             
             setPlayers(usernames)
             console.log('hello')
         })
-    }, [newPlayer,room]);
+    }, [newPlayer]);
 
     console.log('hello')
 
