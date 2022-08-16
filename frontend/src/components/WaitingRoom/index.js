@@ -1,16 +1,16 @@
 import {useState, useEffect} from 'react';
 import React from 'react';
 //import {Players} from '../../components';
-//import {useSelector} from "react-redux";
+import {useSelector} from "react-redux";
 import { socket } from '../../Socket/index';
 
 
 const WaitingRoom = () => {
-    //const [players, setPlayers] = useState([]);
+    const [players, setPlayers] = useState([]);
     const [newPlayer, setNewPlayer] = useState("");
     //const username = useSelector((state) => state.user.username);
     //console.log(username)
-    //const room = useSelector((state) => state.user.room)
+    const room = useSelector((state) => state.user.room)
    // const host = useSelector((state) => state.user.type);
     
 
@@ -20,15 +20,15 @@ const WaitingRoom = () => {
       setNewPlayer(user)
   })
 
-  //Client emits room to server and receives list of users
-  //Sets player array
-    // useEffect(() => {  
-    //     socket.emit('game-players', room, (res) => {
-    //         const usernames = res.map(resp => resp.username)
-    //         setPlayers(usernames)
-    //         console.log('hello')
-    //     })
-    // }, [newPlayer]);
+//   Client emits room to server and receives list of users
+//   Sets player array
+    useEffect(() => {  
+        socket.emit('game-players', room, (res) => {
+            const usernames = res.map(resp => resp.username)
+            setPlayers(usernames)
+            console.log('hello')
+        })
+    }, [newPlayer]);
 
     console.log('hello')
 
