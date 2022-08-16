@@ -41,7 +41,7 @@ class Game {
     }
 
     getGameByRoomName(roomName) {
-        const game = this.games.find((game) => game.room === roomName);
+        const game = this.games.filter((game) => game.room === roomName);
         console.log(game);
         return game;
     }
@@ -68,7 +68,7 @@ class Game {
 
     canRoomBeJoined(roomName) {
         console.log("Looking for room");
-        const game = this.games.find((game) => game.room === roomName);
+        const game = this.games.filter((game) => game.room === roomName);
         if (game.length > 0) {
             return game;
         } else {
