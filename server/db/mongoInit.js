@@ -13,7 +13,6 @@ const init = async () => {
   let dbName = "QuizDB";
   try {
     let client = await mongoClient.connect();
-    console.log(`Your port is ${process.env.URI}`)
     return client.db(dbName);
   } catch (error) {
     console.log(error);

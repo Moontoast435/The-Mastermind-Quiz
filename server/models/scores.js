@@ -14,8 +14,8 @@ class Score {
             try{
                 //console.log("String here happening", init);
                 const db = await init();
-                
                 const dbData = await db.collection("scoreBoard").find({}).toArray();
+                console.log(dbData);
                 const allScores = dbData.map((d) => new Score(d));
                 if (!allScores.length){
                     throw new Error(
