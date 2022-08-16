@@ -1,10 +1,8 @@
-import { userReducer, combineReducers  } from './reducers';
-import { createStore } from 'redux';
+import { userReducer } from './reducers';
+import { legacy_createStore as createStore } from 'redux';
+import { devToolsEnhancer } from 'redux-devtools-extension';
 
-const rootReducer = combineReducers({
-    user: userReducer
-  })
 
-const store = createStore(rootReducer)
+const store = createStore(userReducer, devToolsEnhancer());
 
 export default store;

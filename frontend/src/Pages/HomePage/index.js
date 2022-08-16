@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { setHost, setPlayer, setID } from "../../actions/userType";
 import { socket } from "../../Socket/index";
+import io from "socket.io-client";
 
 
 const HomePage = () => {
@@ -79,7 +80,7 @@ const HomePage = () => {
       setUsername(player);
       if (player === undefined) {
         setError("Please, Enter Valid Username and Roomname.");
-      } else if (room === undefined) {
+      } else if (room === undefined){
         setError("You need to create room or give an existing name");
       } else {
         const config = {
@@ -185,13 +186,13 @@ const HomePage = () => {
         {/* Shows number of Players online */}
         <div>
           {playerCount <= 0
-            ? "No Quizzers Online"
-            : `Quizzers Online: ${playerCount}`}
+            ? "No Players Online"
+            : `Players Online: ${playerCount}`}
           {error && <p className="error">{error}</p>}
         </div>
         <div>
           {allUsers.length <= 0
-            ? "No Players Online :("
+            ? "No Players Online ☹️ "
             : `Players Online: ${playerCount}` && <div className="usersOnline">{allUsers.map(renderUser)}</div>}
         </div>
       </div>

@@ -6,8 +6,7 @@ const defaultState = {
   
 const userReducer = (state = defaultState, action) => {
     switch (action.type) {
-        case "SET ERROR":
-            return { ...state, error: action.payload };
+        
         case "SET_HOST":
             return {
                 ...state, 
