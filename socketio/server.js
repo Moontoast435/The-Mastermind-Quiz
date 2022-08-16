@@ -65,7 +65,7 @@ io.on("connection", (socket) => {
         io.to(roomName).emit("game-start", true);
     });
 
-    socket.on("join room", (config, cb) => {
+    socket.on("join-room", (config, cb) => {
         console.log(config);
 
         const foundRoom = game.canRoomBeJoined(config.room);
