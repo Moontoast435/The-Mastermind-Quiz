@@ -1,13 +1,14 @@
 import {Routes, Route} from 'react-router-dom';
 import './App.css';
-import {HomePage, LobbyRoomPage} from './Pages';
+import {HomePage, Lobby, SetGame} from './Pages';
 
 const App = () => {
   return (
     <div className="App">
       <Routes>
         <Route exact path="/" element={<HomePage />} />
-        <Route exact path="/waitingroom" element={<LobbyRoomPage />} />
+        <Route exact path="/waitingroom" element={<Lobby />} />
+        <Route exact path="/game" element={<SetGame />} />
       </Routes>
     </div>
   );

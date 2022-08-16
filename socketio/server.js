@@ -97,14 +97,18 @@ io.on("connection", (socket) => {
         }
     });
 
-    let roomNameVar;
-    socket.on("game-players", (roomName, cb) => {
-        const data = game.getPlayers(roomName);
-        roomNameVar = roomName;
-        io.in(roomName).emit(data);
+    let gamePlayers; 
+let roomNameVar; 
+socket.on('game-players', (roomName, cb) => {
+    const data = game.getPlayers(roomName)
+    gamePlayers = data
+    roomNameVar = roomName
+    io.in(roomName).emit(data);
 
-        cb(data);
-    });
+    cb(
+        data
+    )
+})
 
     io.to(roomNameVar).emit("game-players");
 

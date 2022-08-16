@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import React from "react";
-import { Players } from "../../components";
+import { Players, LobbyStatus } from "../../components";
 import { useSelector } from "react-redux";
 import { socket } from "../../Socket/index";
 
@@ -10,9 +10,9 @@ const WaitingRoom = () => {
     const username = useSelector((state) => state.user.username);
     console.log(username);
     const room = useSelector((state) => state.user.room);
-    // const host = useSelector((state) => state.user.type);
+    const host = useSelector((state) => state.user.type);
 
-    // Server emits 'new peon' when new player joins
+    // Server emits 'new peon' when new player join
     // Sets new player with username of new user
     socket.on("new player", (user) => {
         setNewPlayer(user);
@@ -34,6 +34,7 @@ const WaitingRoom = () => {
         <div role="lobby" id="Lobby">
             <h2>Waiting Room</h2>
 
+            <LobbyStatus host={host} />
             <div id="players">
                 {players.map((player) => (
                     <Players key={players.indexOf(player)} player={player} />
