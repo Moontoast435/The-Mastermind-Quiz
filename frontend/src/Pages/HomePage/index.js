@@ -143,7 +143,7 @@ const HomePage = () => {
         <div className="heading"> <p id="leaderboardIcon" onClick={leaderBoard}>
           SCOREBOARD 
         </p></div>
-        <div className="headingh1"><h1> The <span class="fire">M</span><span class="fire">A</span><span class="fire">s</span><span class="fire">t</span><span class="fire">e</span><span class="fire">r</span><span class="fire">m</span><span class="fire">i</span><span class="fire">n</span><span class="fire">d</span>  Quiz </h1></div>
+        <div className="headingh1"><h1> The <span className="fire">M</span><span className="fire">A</span><span className="fire">s</span><span className="fire">t</span><span class="fire">e</span><span className="fire">r</span><span className="fire">m</span><span className="fire">i</span><span className="fire">n</span><span className="fire">d</span>  Quiz </h1></div>
       <div id="welcome">
        <div className="form">
         <form role="form" className="form1" >
