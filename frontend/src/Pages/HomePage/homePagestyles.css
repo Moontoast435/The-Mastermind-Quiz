@@ -41,15 +41,11 @@
     
 }
 
-/* h1 {
-    margin-bottom: 5px;
-    font-size: 3.5rem;
-} */
 
 h1 {
-   background-color: #000;
+   background-color:white;
    opacity: 0.9;
-    color: white;
+    color: black;
     font-size: 2em;
     font-family: 'Amethysta', serif;
     text-align: center;
@@ -219,4 +215,5 @@ input {
   font-size: 1.3rem;
   font-family: 'Amethysta', serif;
 
-}
+}  
+
