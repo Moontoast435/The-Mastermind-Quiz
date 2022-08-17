@@ -1,30 +1,31 @@
 const defaultState = {
     user: { username: "", type: "" },
     id: "",
-    room: null
-}
-  
+    room: null,
+};
+
 const userReducer = (state = defaultState, action) => {
     switch (action.type) {
-        
         case "SET_HOST":
             return {
-                ...state, 
+                ...state,
                 user: action.payload,
-                room: action.room
+                room: action.room,
             };
         case "SET_PLAYER":
             return {
-                ...state, 
+                ...state,
                 user: action.payload,
-                room: action.room
+                room: action.room,
             };
         case "SET_ID":
             return {
-                ...state, 
-                id: action.payload.id
-            };    
-    
+                ...state,
+                id: action.payload.id,
+            };
+
+        default:
+            return state;
     }
 };
 
