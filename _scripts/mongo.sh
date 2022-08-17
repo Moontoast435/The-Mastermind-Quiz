@@ -1,0 +1,1 @@
+docker exec -it quizDB mongo 'mongodb+srv://Masterminds:mastermindDB@cluster0.w1gphwe.mongodb.net/?retryWrites=true&w=majority' --username Masterminds
