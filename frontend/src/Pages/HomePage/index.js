@@ -4,6 +4,7 @@ import { useDispatch } from "react-redux";
 import { setHost, setPlayer, setID } from "../../actions/userType";
 import { socket } from "../../Socket/index";
 import io from "socket.io-client";
+import './homePagestyles.css';
 
 
 const HomePage = () => {
@@ -142,31 +143,33 @@ const HomePage = () => {
         <p id="leaderboardIcon" onClick={leaderBoard}>
           SCOREBOARD 
         </p>
-        <h1>The Mastermind Quiz</h1>
-        <form role="form">
+        <h1>The<span class="fire">M</span><span class="fire">A</span><span class="fire">s</span><span class="fire">t</span><span class="fire">e</span><span class="fire">r</span><span class="fire">m</span><span class="fire">i</span><span class="fire">n</span><span class="fire">d</span> Quiz</h1>
+        <div className="form">
+        <form role="form" className="form1" >
           <label htmlFor="username">Username</label>
           <input
             type="text"
             id="username"
             name="username"
-            placeholder="PLAYER NAME"
+            //placeholder="PLAYER NAME"
             value={usrInput || ""}
             onChange={handleInput}
           />
         </form>
-        <form autoComplete="off">
+        <form autoComplete="off"  className="form2">
           <label htmlFor="roomName">Room Name</label>
           <input
             type="text"
             id="roomName"
             name="roomName"
-            placeholder="ROOM NAME"
+            //placeholder="ROOM NAME"
             value={room || ""}
             onChange={handleRoomInput}
           />
-  
+        
           <div className="button-container">
           <button
+            id = "join"
             type="submit"
             name="newQuiz"
             className="newQuiz"
@@ -183,6 +186,7 @@ const HomePage = () => {
           {renderJoin()}
           </div>
         </form>
+        </div>
         {/* Shows number of Players online */}
         <div>
           {playerCount <= 0
