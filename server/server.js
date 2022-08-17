@@ -11,11 +11,11 @@ const server = http.createServer(app);
 const { Games } = require("./Game");
 
 // Root route
-app.get('/', (req, res) => res.send("Hello, world! Welcome to the masterminds\' API + SOCKETIO Server! "));
+server.get('/', (req, res) => res.send("Hello, world! Welcome to the masterminds\' API + SOCKETIO Server! "));
 
 
 //Leaderboard routes
-app.use('/scoreboard', scoreRouter)
+server.use('/scoreboard', scoreRouter)
 
 const io = new Server(server, {
     cors: {
@@ -147,4 +147,4 @@ io.on("connection", (socket) => {
     });
 });
 
-module.exports = app;
+module.exports = server;
