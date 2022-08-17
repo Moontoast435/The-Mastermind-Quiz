@@ -2,9 +2,10 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { setHost, setPlayer, setID } from "../../actions/userType";
-import { socket } from "../../Socket/index";
-import io from "socket.io-client";
+
+import { socket } from "../../Socket/index.js";
 import './homePagestyles.css';
+
 
 
 const HomePage = () => {
@@ -139,6 +140,7 @@ const HomePage = () => {
     };
   
     return (
+
     <>
         <div className="heading"> <p id="leaderboardIcon" onClick={leaderBoard}>
           SCOREBOARD 
@@ -187,6 +189,7 @@ const HomePage = () => {
           {renderJoin()}
           </div>
         </form>
+
         </div>
         {/* Shows number of Players online */}
         <div className="footer">
@@ -204,6 +207,9 @@ const HomePage = () => {
       <div className="aboutGame">How To Play</div>
       </>
     );
-  };
-  
-  export default HomePage;
+
+};
+
+export default HomePage;
+
+
