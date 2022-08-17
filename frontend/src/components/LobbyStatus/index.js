@@ -14,10 +14,9 @@ const LobbyStatus = ({ host }) => {
     const [difficulty, setDifficulty] = useState("");
     const [numberOfQs, setNo] = useState("");
     // const numQ = useSelector((state) => state.config.numberOfQs);
-    const room = useSelector((state) => state.room);
+    const room = useSelector((state) => state.user.room);
 
     const usertype = host; //useSelector((state) => state.user.user.type)
-    // const usertype = "PLAYER"
 
     useEffect(() => {
         // const socket = io(serverEndpoint);
@@ -48,7 +47,7 @@ const LobbyStatus = ({ host }) => {
         // dispatch(fetchQuiz(numberOfQs, subject, difficulty));
         navigate("/quiz");
     };
-    //changing subject from number to word
+
     let subjectWord;
     switch (subject) {
         case "9":

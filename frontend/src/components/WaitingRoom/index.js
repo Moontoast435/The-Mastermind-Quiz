@@ -7,9 +7,9 @@ import { socket } from "../../Socket/index";
 const WaitingRoom = () => {
     const [players, setPlayers] = useState([]);
     const [newPlayer, setNewPlayer] = useState("");
-    const username = useSelector((state) => state.user.username);
+    const username = useSelector((state) => state.user.user.username);
     console.log(username);
-    const room = useSelector((state) => state.room);
+    const room = useSelector((state) => state.user.room);
     console.log(room);
     const host = useSelector((state) => state.user.type);
     console.log(host);

@@ -10,11 +10,11 @@ const Form = () => {
     const [subject, setSubject] = useState(9);
     const [categoryList, setCategoryList] = useState({});
 
-    const roomName = useSelector((state) => state.room);
+    const roomName = useSelector((state) => state.user.room);
     console.log(roomName);
-    const id = useSelector((state) => state.id);
+    const id = useSelector((state) => state.user.id);
     console.log(id);
-    const username = useSelector((state) => state.user.username);
+    const username = useSelector((state) => state.user.user.username);
 
     const navigate = useNavigate();
     const dispatch = useDispatch();
