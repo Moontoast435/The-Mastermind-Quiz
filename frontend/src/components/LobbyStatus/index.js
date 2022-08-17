@@ -2,33 +2,19 @@ import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 // import { fetchQuiz } from "../../actions";
-<<<<<<< HEAD
-import { socket } from '../../Socket/index';
-// import "./style.css"
-=======
 import { socket } from "../../Socket";
 // import "./style.css";
->>>>>>> e6fcf89dc7245570599093d570b5823e02296c3e
 
 const LobbyStatus = ({ host }) => {
     const navigate = useNavigate();
     const dispatch = useDispatch();
 
-<<<<<<< HEAD
-    const [ready, setReady] = useState(false)
-    const [subject, setSubject] = useState("") 
-    const [difficulty, setDifficulty] = useState("")
-    const [numberOfQs, setNo] = useState("")
-    // const useSelector((state) => state.config.numberOfQs ) 
-    const room = useSelector((state) => state.user.room)
-=======
     const [ready, setReady] = useState(false);
     const [subject, setSubject] = useState("");
     const [difficulty, setDifficulty] = useState("");
     const [numberOfQs, setNo] = useState("");
     // const numQ = useSelector((state) => state.config.numberOfQs);
     const room = useSelector((state) => state.room);
->>>>>>> e6fcf89dc7245570599093d570b5823e02296c3e
 
     const usertype = host; //useSelector((state) => state.user.user.type)
     // const usertype = "PLAYER"
@@ -62,7 +48,6 @@ const LobbyStatus = ({ host }) => {
         // dispatch(fetchQuiz(numberOfQs, subject, difficulty));
         navigate("/quiz");
     };
-    //changing subject from number to word
     let subjectWord;
     switch (subject) {
         case "9":
@@ -147,7 +132,6 @@ const LobbyStatus = ({ host }) => {
             <button id="start-game" onClick={handleClick}>
                 Start
             </button>
-            // onclick fetch questions and go to quiz page
         );
     } else {
         return (
