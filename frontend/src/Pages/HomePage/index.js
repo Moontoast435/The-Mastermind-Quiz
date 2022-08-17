@@ -139,12 +139,13 @@ const HomePage = () => {
     };
   
     return (
-      <div id="welcome">
-        <p id="leaderboardIcon" onClick={leaderBoard}>
+    <>
+        <div className="heading"> <p id="leaderboardIcon" onClick={leaderBoard}>
           SCOREBOARD 
-        </p>
-        <h1>The<span class="fire">M</span><span class="fire">A</span><span class="fire">s</span><span class="fire">t</span><span class="fire">e</span><span class="fire">r</span><span class="fire">m</span><span class="fire">i</span><span class="fire">n</span><span class="fire">d</span> Quiz</h1>
-        <div className="form">
+        </p></div>
+        <div className="headingh1"><h1> The <span class="fire">M</span><span class="fire">A</span><span class="fire">s</span><span class="fire">t</span><span class="fire">e</span><span class="fire">r</span><span class="fire">m</span><span class="fire">i</span><span class="fire">n</span><span class="fire">d</span>  Quiz </h1></div>
+      <div id="welcome">
+       <div className="form">
         <form role="form" className="form1" >
           <label htmlFor="username">Username</label>
           <input
@@ -188,7 +189,7 @@ const HomePage = () => {
         </form>
         </div>
         {/* Shows number of Players online */}
-        <div>
+        <div className="footer">
           {playerCount <= 0
             ? "No Players Online"
             : `Players Online: ${playerCount}`}
@@ -200,6 +201,8 @@ const HomePage = () => {
             : `Players Online: ${playerCount}` && <div className="usersOnline">{allUsers.map(renderUser)}</div>}
         </div>
       </div>
+      <div className="aboutGame">How To Play</div>
+      </>
     );
   };
   

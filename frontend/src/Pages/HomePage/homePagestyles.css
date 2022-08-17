@@ -23,11 +23,11 @@
     display: flex;
     flex-direction: column;
     position: absolute;
-    width: 40%;
-    height: 60%;
+    width: 30%;
+    height: 40%;
     border-radius:30px ;
-    margin-left: 450px;
-    margin-top: 200px;
+    margin-left: 530px;
+    margin-top: 190px;
     justify-content: center;
     align-items: center;
 
@@ -36,7 +36,8 @@
 
 #leaderboardIcon {
     font-size: 1.5rem;
-    margin-bottom: 10px;
+    padding-bottom: 10px;
+    color: ghostwhite;
     
 }
 
@@ -46,7 +47,8 @@
 } */
 
 h1 {
-    background-color: #111;
+   background-color: #000;
+   opacity: 0.9;
     color: white;
     font-size: 2em;
     font-family: 'Amethysta', serif;
@@ -55,6 +57,15 @@ h1 {
     text-transform: uppercase;
     letter-spacing: .3em;
     white-space:nowrap;
+    display: inline;
+    padding-block: 10px;
+    padding-inline: 10px;
+   
+
+  }
+
+  .headingh1 {
+    margin-top: 20px;
   }
   
   span {
@@ -73,13 +84,7 @@ h1 {
     -o-animation: animation 1s ease-in-out infinite alternate;
   }
   
-  .burn {
-    animation: animation .65s ease-in-out infinite alternate;
-    -moz-animation: animation .65s ease-in-out infinite alternate;
-    -webkit-animation: animation .65s ease-in-out infinite alternate;
-    -o-animation: animation .65s ease-in-out infinite alternate;
-  }
-  
+ 
   @keyframes animation
   {
   0% {text-shadow: 0 0 20px #fefcc9,
@@ -158,16 +163,21 @@ h1 {
 
 
 .form {
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     font-size: 1.5rem;
 }
 .form1 {
-    margin-bottom: 10px;
+    margin-top: 20px;
     
 }
 
+.form2 {
+  margin-top: 10px;
+  
+}
+
 input {
-    margin-left: 10px;
+    margin-left: 30px;
     height: 25px;
     border-radius: 20px;
     border: 2px solid black;
@@ -185,8 +195,28 @@ input {
     width: 150px;
     border-radius: 20px;
     border: 2px solid black;
-    margin: 2px;
-    margin-top: 10px;
+    margin: 4px;
+    margin-top: 30px;
+    
 }
 
+#join:hover {
+  background-color: #6A1616;
+  color: ghostwhite;
+}
 
+.footer {
+  font-family: 'Amethysta', serif;
+  font-size: 1.2rem;
+  padding-top: 5px;
+}
+
+.aboutGame {
+  color: ghostwhite;
+  position: absolute;
+  bottom: 10px;
+  left: 700px;
+  font-size: 1.3rem;
+  font-family: 'Amethysta', serif;
+
+}
