@@ -1,4 +1,4 @@
-class Game {
+class Games {
     constructor() {
         this.games = [];
         this.players = [];
@@ -8,14 +8,15 @@ class Game {
         let game = {
             host: hostID,
             room: roomName,
-            difficulty,
-            count,
-            subject,
+            difficulty: difficulty,
+            count: count,
+            subject: subject,
             players: [],
             active: false,
         };
 
         this.games.push(game);
+
         this.games.forEach((room) => console.log(room));
         return game;
     }
@@ -24,60 +25,85 @@ class Game {
         let player = {
             username: username,
             roomName: room,
-            roomId: hostID,
+            roomID: hostID,
             score: 0,
         };
 
         this.players.push(player);
-        let game = this.games.find((game) => game.room === room);
+        let game = this.games.find((y) => y.room == room);
         try {
             game.players.push(player);
             console.log(game.players);
             return player;
-        } catch (error) {
-            console.log(`Add player: ${error}`);
-            return { err: error };
+        } catch (err) {
+            console.log("add player has : " + err);
+            return { err: err };
         }
     }
 
-    getGameByRoomName(roomName) {
-        const game = this.games.find((game) => game.room === roomName);
-        console.log(game);
-        return game;
+    getPlayersForGame(roomName) {
+        const game = this.games.filter((game) => game.room === roomName);
+        console.log(game.players);
     }
 
-    getPlayers(roomName) {
-        const game = this.games.find((game) => game.room === roomName);
-        if (game === undefined) return "Error! No game found";
+    filterRoom(roomName) {
+        return this.games.room === roomName;
+    }
+
+    getPlayerData(roomName) {
+        let game = this.games.find((y) => y.room == roomName);
+
+        if (game === undefined) {
+            return "error";
+        }
         return game.players;
     }
 
     addScore(room, username, score) {
-        const game = this.games.find((game) => game.room === room);
-        console.log(`ADD SCORE: ${game}`);
-        console.log(`ADD SCORE: ${username}`);
+        let game = this.games.find((y) => y.room == room);
+
+        console.log(game, "addscore gameroom");
+        console.log(username, "addscore username");
         try {
-            const player = game.players.find((player) => (player.username = username));
+            let player = game.players.find((p) => p.username === username);
+
             player.score = score;
+
             return game.players;
-        } catch (error) {
-            console.log(`Add score error: ${error}`);
-            return { err: error };
+        } catch (err) {
+            console.log("add score error: " + err);
+            return { err: err };
         }
+    }
+
+    getGame(roomName) {
+        let game = this.games.find((y) => y.room == roomName);
+        return game;
     }
 
     canRoomBeJoined(roomName) {
         console.log("Looking for room");
-        const game = this.games.find((game) => game.room === roomName);
+        const game = this.games.filter((game) => {
+            console.log(game.room === roomName);
+            return game.room === roomName;
+        });
         if (game.length > 0) {
             return game;
         } else {
             return "ERROR";
         }
     }
+    getGameByRoom(roomName) {
+        this.games.forEach((game) => console.log(game));
+        const game = this.games.filter((game) => {
+            console.log(game.room === roomName);
+            return game.room === roomName;
+        });
+        return game;
+    }
 
     checkRoomName(room) {
-        let game = this.getGameByRoomName(room);
+        let game = this.getGameByRoom(room);
         if (game.length > 0) {
             return false;
         } else {
@@ -86,4 +112,4 @@ class Game {
     }
 }
 
-module.exports = { Game };
+module.exports = { Games };
