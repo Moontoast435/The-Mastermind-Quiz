@@ -7,6 +7,7 @@ import { socket } from "../../Socket";
 import { getResult } from "../../actions";
 
 const LobbyStatus = ({ host }) => {
+
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
@@ -167,6 +168,7 @@ const LobbyStatus = ({ host }) => {
       </>
     );
   }
+
 };
 
 export default LobbyStatus;
