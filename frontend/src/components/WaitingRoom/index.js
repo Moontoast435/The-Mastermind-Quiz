@@ -5,6 +5,7 @@ import { useSelector } from "react-redux";
 import { socket } from "../../Socket/index";
 
 const WaitingRoom = () => {
+
   const [players, setPlayers] = useState([]);
   const [newPlayer, setNewPlayer] = useState("");
   const username = useSelector((state) => state.user.user.username);
@@ -13,6 +14,7 @@ const WaitingRoom = () => {
   console.log(room);
   const host = useSelector((state) => state.user.user.type);
   console.log(host);
+
 
   socket.on("new player", (user) => {
     setNewPlayer(user);

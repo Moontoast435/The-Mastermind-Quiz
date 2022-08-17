@@ -1,4 +1,5 @@
 const init = {
+
   config: {},
 };
 
@@ -16,3 +17,4 @@ const configReducer = (state = init, action) => {
 };
 
 export default configReducer;
+
