@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 // import { fetchQuiz } from "../../actions";
-import { socket } from "../../socket";
-import "./style.css";
+import { socket } from "../../Socket";
+// import "./style.css";
 
 const LobbyStatus = ({ host }) => {
     const navigate = useNavigate();
@@ -13,8 +13,8 @@ const LobbyStatus = ({ host }) => {
     const [subject, setSubject] = useState("");
     const [difficulty, setDifficulty] = useState("");
     const [numberOfQs, setNo] = useState("");
-    useSelector((state) => state.config.config.numberOfQs);
-    const room = useSelector((state) => state.user.room);
+    // const numQ = useSelector((state) => state.config.numberOfQs);
+    const room = useSelector((state) => state.room);
 
     const usertype = host; //useSelector((state) => state.user.user.type)
     // const usertype = "PLAYER"
@@ -59,6 +59,7 @@ const LobbyStatus = ({ host }) => {
             break;
         case "11":
             subjectWord = "Film";
+            break;
         case "12":
             subjectWord = "Music";
             break;
