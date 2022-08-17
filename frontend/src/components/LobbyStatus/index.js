@@ -7,8 +7,10 @@ import { socket } from "../../Socket";
 import { getResult } from "../../actions";
 
 const LobbyStatus = ({ host }) => {
+
   const navigate = useNavigate();
   const dispatch = useDispatch();
+
 
   const [ready, setReady] = useState(false);
   const [subject, setSubject] = useState("");
@@ -19,6 +21,7 @@ const LobbyStatus = ({ host }) => {
 
   const usertype = host; //useSelector((state) => state.user.user.type)
   // const usertype = "PLAYER"
+
 
   useEffect(() => {
     // const socket = io(serverEndpoint);
@@ -43,7 +46,9 @@ const LobbyStatus = ({ host }) => {
     e.preventDefault();
     dispatch(getResult(numberOfQs, subject, difficulty));
 
+
     socket.emit("game-start", room);
+
 
     navigate("/quiz");
   };
@@ -163,6 +168,7 @@ const LobbyStatus = ({ host }) => {
       </>
     );
   }
+
 };
 
 export default LobbyStatus;
