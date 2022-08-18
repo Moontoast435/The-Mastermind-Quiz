@@ -1,5 +1,5 @@
-/*@import url('https://fonts.googleapis.com/css2?family=Sofia&display=swap');*/
-/*@import "https://fonts.googleapis.com/css?family=Rancho&effect=fire-animation";*/
+/* @import url('https://fonts.googleapis.com/css2?family=Sofia&display=swap');
+/*@import "https://fonts.googleapis.com/css?family=Rancho&effect=fire-animation";
 @import url('https://fonts.googleapis.com/css2?family=Amethysta&family=Sofia&display=swap');
 
 * {
@@ -34,7 +34,7 @@
     align-items: center;
 
 
-} */
+} 
 
 #leaderboardIcon {
   font-family: 'Amethysta', serif;
@@ -202,4 +202,4 @@ input {
   width: 170px;
 
 }   
-
+ */
