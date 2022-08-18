@@ -1,7 +1,11 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
+<<<<<<< HEAD
 import { HomePage, AboutusPage ,Lobby, SetGame, QuizPage, LeaderBoard } from "./Pages";
+=======
+import { HomePage, Lobby, SetGame, QuizPage, LeaderBoard, AboutusPage } from "./Pages";
+>>>>>>> 1eb09a6c78a64cd41a9d9dd2ad58abffd1d2690b
 
 const App = () => {
   return (
