@@ -209,7 +209,7 @@ const HomePage = () => {
               : `Players Online: ${playerCount}` && <div className="usersOnline">{allUsers.map(renderUser)}</div>}
           </div>
         </div>
-       <div className="aboutGame" onClick={aboutUs}>How To Play</div>
+       <div role="gotoaboutUs" className="aboutGame" onClick={aboutUs}>How To Play</div>
         </>
       );
     };
