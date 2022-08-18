@@ -1,6 +1,6 @@
 [build]
     base = frontend
-    command = "CI= npm run build" # how to trigger a build
+    command = "npm run build" # how to trigger a build
     publish = "frontend/build" # what folder to publish 
 
 [[redirects]]
