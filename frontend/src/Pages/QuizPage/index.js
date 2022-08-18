@@ -9,24 +9,20 @@ const QuizPage = ({ retry }) => {
 
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
 
-    const [markedAnswers, setMarkedAnswers] = useState("");
-
-    console.log(questions);
+    const [markedAnswers, setMarkedAnswers] = useState([]);
 
     const isQuestionEnd = currentQuestionIndex == questions.amount;
-
+    console.log(markedAnswers);
     function calculateResult() {
         let correct = 0;
-        questions.result.results.forEach((result) => {
-            const check = Object.entries(result);
-
-            for (const [key, value] of check) {
-                console.log(value);
-                if (decodeURIComponent(value) == markedAnswers) {
-                    correct++;
-                } else {
-                    console.log("no chance!");
-                }
+        questions.result.results.forEach((result, i) => {
+            console.log(i + 1);
+            console.log(result.correct_answer);
+            console.log(decodeURIComponent(result.correct_answer));
+            if (decodeURIComponent(result.correct_answer) == markedAnswers[i]) {
+                correct++;
+            } else {
+                console.log("no chance!");
             }
         });
 
@@ -46,8 +42,8 @@ const QuizPage = ({ retry }) => {
                     query={questions.result.results[currentQuestionIndex]}
                     totalQuestions={questions.result.results.length}
                     currentQuestion={currentQuestionIndex + 1}
-                    setAnswer={(index) => {
-                        setMarkedAnswers(index);
+                    setAnswer={(val) => {
+                        setMarkedAnswers([...markedAnswers, val]);
 
                         setCurrentQuestionIndex((prevIndex) => prevIndex + 1);
                     }}
