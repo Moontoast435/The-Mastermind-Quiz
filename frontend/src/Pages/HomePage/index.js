@@ -136,7 +136,7 @@ const HomePage = () => {
     };
   
     const leaderBoard = () => {
-      navigate("./leaderboard");
+      navigate("/leaderboard");
     };
   
     return (

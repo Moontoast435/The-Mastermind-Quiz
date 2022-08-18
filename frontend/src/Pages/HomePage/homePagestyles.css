@@ -10,9 +10,10 @@
 
 #root {
     background-image:url('../../images/img3jpg.webp');
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 731px;
+    height: 100vh;
     opacity: 0.8;    
 }
 
@@ -164,7 +165,8 @@ h1 {
 }
 .form1 {
     margin-top: 20px;
-    
+
+  
 }
 
 .form2 {
