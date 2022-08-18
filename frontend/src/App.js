@@ -1,7 +1,7 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
-import { HomePage, Lobby, SetGame, QuizPage } from "./Pages";
+import { HomePage, Lobby, SetGame, QuizPage, LeaderBoard } from "./Pages";
 
 const App = () => {
   return (
@@ -12,6 +12,7 @@ const App = () => {
         <Route exact path="/waitingroom" element={<Lobby />} />
         <Route exact path="/game" element={<SetGame />} />
         <Route path="/quiz" element={<QuizPage />} />
+        <Route path="/leaderboard" element={<LeaderBoard/>}/>
       </Routes>
     </div>
   );
