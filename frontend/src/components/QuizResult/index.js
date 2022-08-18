@@ -9,8 +9,8 @@ import Image from "../../assets/MM-LOGO.png";
 const QuizResult = ({ result }) => {
   const navigate = useNavigate();
   const username = useSelector((state) => state.user.user.username);
-  const handleRestartOptions = () => {
-    
+  const handleRestartOptions = (e) => {
+    e.preventDefault();
     navigate("../");
   };
 
@@ -47,7 +47,7 @@ const QuizResult = ({ result }) => {
         sendResults();
         console.log("sent results");
       } 
-    }, []);
+    }, [score]);
   
   return (
     <div className="result-screen-container">
@@ -65,7 +65,7 @@ const QuizResult = ({ result }) => {
           </span>
           questions.
         </p>
-        <button className="retry-btn" onClick={handleRestartOptions()}>
+        <button className="retry-btn" onClick={handleRestartOptions}>
           Play Again
         </button>
       </div>
