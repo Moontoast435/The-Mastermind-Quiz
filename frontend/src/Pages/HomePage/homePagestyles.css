@@ -1,7 +1,9 @@
+
 /*@import url('https://fonts.googleapis.com/css2?family=Sofia&display=swap');*/
 /*@import "https://fonts.googleapis.com/css?family=Rancho&effect=fire-animation";*/
 @import url("https://fonts.googleapis.com/css2?family=Amethysta&family=Sofia&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap");
+
 
 * {
     margin: 0;
@@ -56,6 +58,7 @@
     align-items: center;
     gap: 20px;
 }
+
 
 .formBox .form1,
 .formBox .form2 {
@@ -129,6 +132,7 @@
     transition: all 0.3s ease;
 }
 
+
 .footer,
 .footer2 {
     color: #fff;
@@ -172,3 +176,4 @@
     transform: translateX(-80px);
     opacity: 1;
 }
+
