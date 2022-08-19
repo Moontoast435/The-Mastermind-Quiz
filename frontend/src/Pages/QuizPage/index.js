@@ -12,13 +12,9 @@ const QuizPage = ({ retry }) => {
     const [markedAnswers, setMarkedAnswers] = useState([]);
 
     const isQuestionEnd = currentQuestionIndex == questions.amount;
-    console.log(markedAnswers);
     function calculateResult() {
         let correct = 0;
         questions.result.results.forEach((result, i) => {
-            console.log(i + 1);
-            console.log(result.correct_answer);
-            console.log(decodeURIComponent(result.correct_answer));
             if (decodeURIComponent(result.correct_answer) == markedAnswers[i]) {
                 correct++;
             } else {

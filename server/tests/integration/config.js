@@ -3,7 +3,7 @@ const fs = require("fs");
 const { MongoClient, ObjectId } = require("mongodb");
 // const { init } = require("../../dbConfig/init.js");
 const app = require("../../server.js");
-const connectionUrl = process.env.URI;
+const connectionUrl = process.env.MONGODB_CONNECTION;
 const dbName = process.env.DB_NAME;
 const init = async () => {
     let client = await MongoClient.connect(connectionUrl);
@@ -15,6 +15,7 @@ const resetTestDB = () => {
     return new Promise(async (resolve, reject) => {
         try {
             const db = await init();
+            console.log(db);
             await db.collection("players").removeMany({});
             await db.collection("players").insertOne([
                 {   

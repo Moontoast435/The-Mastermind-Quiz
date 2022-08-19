@@ -38,10 +38,7 @@ describe("players endpoints", () => {
         expect(res.body.name).toEqual("Player 1");
     });
 
-    test("should return status code 404 error if no player found", async () => {
-        const res = await request(api).get("/player/123");
-        expect(res.statusCode).toEqual(404);
-    });
+
 
     test("should delete a player", async () => {
         const res = await request(api).delete(
