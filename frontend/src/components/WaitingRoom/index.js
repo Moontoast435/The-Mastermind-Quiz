@@ -35,7 +35,7 @@ const WaitingRoom = () => {
             <h2 className="wait-heading">Pre-game lobby</h2>
 
             <LobbyStatus host={host} />
-            <p style={{ color: "white", margin: "20px" }}>Current players:</p>
+            <p style={{ color: "white", margin: "20px" }}>Current pirates:</p>
             <div id="players">
                 {players.map((player, i) => (
                     <Players key={i} player={player} />
