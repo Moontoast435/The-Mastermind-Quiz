@@ -6,20 +6,12 @@ import { MemoryRouter as Router } from "react-router-dom";
 import jestConfig from "../../../../server/tests/jest.config";
 
 
-const fetchMock = require("jest-fetch-mock");
-fetchMock.enableMocks();
+// const fetchMock = require("jest-fetch-mock");
+// fetchMock.enableMocks();
 describe("LeaderBoard", () => {
   let getResultMock;
 
   beforeEach(() => {
-    fetch.mockResponseOnce(
-      new Promise((resolve, reject) => {
-        resolve([
-          { username: "Sean", score: 20000 },
-          { username: "Stefan", score : 4 },
-        ]);
-      })
-    );
     render(
       <Router>
         <Provider store={store}>
@@ -37,7 +29,7 @@ describe("LeaderBoard", () => {
 
   test("it renders the heading with role leaderboard-heading", () => {
     const heading = screen.getByRole("leaderboard-heading");
-    expect(heading.textContent).toContain("LEADERBOARD");
+    expect(heading.textContent).toContain("Hall Of Fame");
   });
 
   test("it renders a button with ariaLabel leaderboard-back-button", () => {

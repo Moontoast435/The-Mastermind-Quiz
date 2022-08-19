@@ -36,7 +36,7 @@ const WaitingRoom = () => {
 
             <LobbyStatus host={host} />
             <p style={{ color: "white", margin: "20px" }}>Current pirates:</p>
-            <div id="players">
+            <div id="players" role="players">
                 {players.map((player, i) => (
                     <Players key={i} player={player} />
                 ))}

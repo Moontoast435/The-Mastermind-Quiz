@@ -25,7 +25,7 @@ const LeaderBoard = () => {
     return (
         <>
             <div className="leaderboardbgimg">
-                <div className="leaderboard-display">
+                <div className="leaderboard-display" role="leaderboard-display">
                     <button
                         className="lbbtn"
                         aria-label="leaderboard-back-button"
@@ -41,7 +41,7 @@ const LeaderBoard = () => {
                         <p>Username</p>
                         <p>Score</p>
                     </div>
-                    <div className="leaderboard-container">{leaderBoardDisplay}</div>
+                    <div className="leaderboard-container" role="leaderboard-container">{leaderBoardDisplay}</div>
                 </div>
             </div>
         </>

@@ -23,7 +23,12 @@ describe("Waiting Room", () => {
     });
 
     test("it renders a title with", () => {
-        const p = screen.getByText("Waiting Room");
+        const p = screen.getByText("Pre-game lobby");
         expect(p).toBeInTheDocument();
+    });
+
+    test("it renders a title with", () => {
+        const players = screen.getByRole("players");
+        expect(players).toBeInTheDocument();
     });
 });
