@@ -1,5 +1,5 @@
 import React from "react";
-
+import "./setGame.css";
 import { Form } from "../../components";
 
 function SetGame() {
