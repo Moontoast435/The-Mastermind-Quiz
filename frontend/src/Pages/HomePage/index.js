@@ -2,9 +2,9 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { setHost, setPlayer, setID } from "../../actions/userType";
-import image from "../../images/img2.jpg";
-import image2 from "../../images/scroll-png.png";
+
 import { socket } from "../../Socket/index.js";
+import { FaTrophy } from "react-icons/fa";
 import "./homePagestyles.css";
 
 const HomePage = () => {
@@ -149,8 +149,9 @@ const HomePage = () => {
                 <div className="heading">
                     {" "}
                     <p id="leaderboardIcon" onClick={leaderBoard}>
-                        SCOREBOARD
+                        <FaTrophy />
                     </p>
+                    <span className="ldb-text">Hall of Fame </span>
                 </div>
                 <div className="headingh1">
                     <h1> The Mastermind Quiz </h1>
@@ -158,23 +159,21 @@ const HomePage = () => {
                 <div className="scrollBox">
                     <div className="formBox">
                         <form role="form" className="form1">
-                            {/*<label htmlFor="username">Username</label>*/}
                             <input
                                 type="text"
                                 id="username"
                                 name="username"
-                                placeholder="Player Name"
+                                placeholder="Pirate Name"
                                 value={usrInput || ""}
                                 onChange={handleInput}
                             />
                         </form>
                         <form autoComplete="off" className="form2">
-                            {/*<label htmlFor="roomName">Room Name</label>*/}
                             <input
                                 type="text"
                                 id="roomName"
                                 name="roomName"
-                                placeholder="Room Name"
+                                placeholder="Ship Name"
                                 value={room || ""}
                                 onChange={handleRoomInput}
                             />
@@ -204,13 +203,13 @@ const HomePage = () => {
 
                 {/* Shows number of Players online */}
                 <div className="footer">
-                    {playerCount <= 0 ? "No Players Online" : `Players Online: ${playerCount}`}
+                    {playerCount <= 0 ? "No Pirates Online" : `Pirates Online: ${playerCount}`}
                     {error && <p className="error">{error}</p>}
                 </div>
                 <div className="footer2">
                     {allUsers.length <= 0
-                        ? "No Players Online ☹️ "
-                        : `Players Online: ${playerCount}` && (
+                        ? "No Pirates Online ☠ "
+                        : `Pirates Online: ${playerCount}` && (
                               <div className="usersOnline">{allUsers.map(renderUser)}</div>
                           )}
                 </div>

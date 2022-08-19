@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { socket } from "../../Socket/index";
 import { useSelector, useDispatch } from "react-redux";
 import { roomConfig } from "../../actions/roomConfig";
+import { FiChevronsLeft } from "react-icons/fi";
 
 const Form = () => {
     const [difficulty, setDifficulty] = useState("easy");
@@ -85,12 +86,15 @@ const Form = () => {
     return (
         <>
             <button id="backBtn" onClick={backBtn}>
-                {/* <FontAwesomeIcon icon={faAngleDoubleLeft} bounce /> BACK */}
+                <span className="backIco">
+                    <FiChevronsLeft />
+                </span>{" "}
+                Go Back
             </button>
-            <form aria-label="game-selection" onSubmit={handleSubmit}>
+            <form className="gameSetUpForm" aria-label="game-selection" onSubmit={handleSubmit}>
                 <h1 id="game-heading"> GAME SETUP </h1>
-                <p> PICK A CATEGORY </p>
-                <label htmlFor="pick a category">
+                <p className="secondary-txt"> PICK A CATEGORY </p>
+                <label className="cat-lbl" htmlFor="pick a category">
                     <select
                         onChange={handleChangeSubject}
                         aria-label="category"
@@ -102,7 +106,7 @@ const Form = () => {
                     </select>
                 </label>
                 <br />
-                <p> NUMBER OF QUESTIONS </p>
+                <p className="secondary-txt"> NUMBER OF QUESTIONS </p>
                 <label htmlFor="number of questionss">
                     <input
                         role="number-of-questions"
@@ -116,7 +120,7 @@ const Form = () => {
                     />
                 </label>
                 <br />
-                <p> DIFFICULTY </p>
+                <p className="secondary-txt"> DIFFICULTY </p>
                 <label htmlFor="difficulty">
                     <select
                         name="difficulty"

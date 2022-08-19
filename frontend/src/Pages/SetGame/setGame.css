@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Amethysta&family=Sofia&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap");
+
+#game-setup {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 50px;
+    font-family: "Amethysta", serif;
+    background-image: url(../../images/pirates.jpg);
+    background-position: center;
+    background-size: cover;
+    padding-inline: 50px;
+}
+
+#backBtn {
+    align-self: flex-start;
+    padding-block: 10px;
+    padding-inline: 20px;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: transparent;
+    box-shadow: -2px -2px 4px rgba(0, 0, 0, 0.4), 2px 2px 4px rgba(255, 255, 255, 0.2);
+    color: #fda127;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.backIco {
+    display: grid;
+    place-items: center;
+    font-size: 1.2rem;
+}
+
+#backBtn:hover {
+    transform: scale(0.95);
+}
+
+.gameSetUpForm {
+    width: 500px;
+}
+
+#game-heading {
+    margin-bottom: 100px;
+    color: #ffff;
+    letter-spacing: 2px;
+}
+
+.secondary-txt {
+    line-height: 2;
+    color: #fff;
+}
+
+.cat-lbl {
+    color: #fff;
+}
+
+#category {
+    width: 80%;
+    height: 45px;
+    border-radius: 30px;
+    padding-inline: 15px;
+    outline: 0;
+    border: none;
+    background: transparent;
+    background-image: none;
+    backdrop-filter: blur(11px);
+    box-shadow: -2px -2px 4px rgb(0 0 0 / 40%), 2px 2px 4px rgb(255 255 255 / 20%);
+    font-size: 16px;
+    appearance: none;
+    margin-block: 15px;
+}
+
+#number-of-questions,
+#difficulty {
+    width: 50%;
+    height: 45px;
+    border-radius: 30px;
+    padding-inline: 15px;
+    outline: 0;
+    border: none;
+    background: transparent;
+    background-image: none;
+    backdrop-filter: blur(11px);
+    box-shadow: -2px -2px 4px rgb(0 0 0 / 40%), 2px 2px 4px rgb(255 255 255 / 20%);
+    font-size: 16px;
+    margin-block: 15px;
+}
+
+#play-button {
+    outline: none;
+    border: none;
+    margin-top: 40px;
+    width: 150px;
+    padding-block: 10px;
+    border-radius: 20px;
+    box-shadow: -2px -2px 4px rgb(0 0 0 / 40%), 2px 2px 4px rgb(255 255 255 / 20%);
+    background-color: rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    color: #fff;
+    font-weight: 700;
+    font-size: 16px;
+}

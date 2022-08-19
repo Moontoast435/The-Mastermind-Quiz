@@ -1,0 +1,40 @@
+.lobby {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 50px;
+    font-family: "Amethysta", serif;
+    background-image: url(../../images/pirates.jpg);
+    background-position: center;
+    background-size: cover;
+    padding-inline: 50px;
+}
+
+.wait-heading {
+    line-height: 2;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 50px;
+}
+
+#start-game {
+    outline: none;
+    border: none;
+    margin-top: 40px;
+    width: 150px;
+    padding-block: 10px;
+    border-radius: 20px;
+    box-shadow: -2px -2px 4px rgb(0 0 0 / 40%), 2px 2px 4px rgb(255 255 255 / 20%);
+    background-color: rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+    color: #fff;
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 50px;
+}
+
+.players {
+    color: #fff;
+}
