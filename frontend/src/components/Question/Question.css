@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Amethysta&family=Sofia&display=swap");
+
 .question-container {
     display: flex;
     flex-direction: column;
@@ -8,6 +10,7 @@
     width: 1200px;
     margin: 0 auto;
     position: relative;
+    font-family: "Amethysta", serif;
 }
 .question-page-img {
     margin: 0 auto;
@@ -90,7 +93,7 @@
     gap: 5px;
     display: flex;
     font-size: 18px;
-    color: #fff;
+    color: black;
 }
 .main {
     width: 900px;
@@ -109,19 +112,25 @@
     cursor: pointer;
 }
 .question-title {
-    color: aliceblue;
+    color: white;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.7);
 }
 .question-text-box {
     width: 700px;
     height: 200px;
-    border: 2px solid white;
+    /* border: 2px solid white; */
     border-radius: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     align-content: center;
     justify-content: center;
-    background: #fff;
+    background: rgba(0, 0, 0, 0.7);
+    box-shadow: -2px -2px 4px rgb(0 0 0 / 40%), 2px 2px 4px rgb(255 255 255 / 40%);
+    backdrop-filter: blur(5px);
+    color: #fff;
 }
 .question-text {
     font-size: 16px;
@@ -145,6 +154,15 @@
     grid-template-columns: repeat(2, 2fr);
     grid-template-rows: repeat(2, 2fr);
 }
+
+.option {
+    background: rgba(0, 0, 0, 0.7);
+    box-shadow: -2px -2px 4px rgb(0 0 0 / 40%), 2px 2px 4px rgb(255 255 255 / 40%);
+    backdrop-filter: blur(40px);
+    color: #fff;
+    border: none;
+}
+
 .next-btn {
     width: 175px;
     height: 36px;
