@@ -80,9 +80,9 @@ const HomePage = () => {
         const player = usrInput;
         setUsername(player);
         if (player === undefined) {
-            setError("Please, Enter Valid Username and Roomname.");
+            setError("whoops! you don't exist");
         } else if (room === undefined) {
-            setError("You need to create room or give an existing name");
+            setError("Please create a room");
         } else {
             const config = {
                 room: room,
