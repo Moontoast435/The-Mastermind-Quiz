@@ -27,7 +27,7 @@ const QuizResult = ({ result }) => {
         };
 
         const { data } = await axios.post(
-          `https://obscure-brushlands-72357.herokuapp.com/scoreBoard`,
+          `https://masterminds-quiz.onrender.com/scoreBoard`,
           results,
           options
         );
