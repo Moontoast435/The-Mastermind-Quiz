@@ -6,7 +6,7 @@ const LeaderBoard = () => {
     const navigate = useNavigate();
     const [leaderBoard, setLeaderBoard] = useState([]);
     useEffect(() => {
-        fetch("https://masterminds-quiz.onrender.com/scoreBoard")
+        fetch("https://masterminds-quiz.onrender.com/scoreboard")
             .then((res) => res.json())
             .then((data) => setLeaderBoard(data));
     }, []);
